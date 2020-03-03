@@ -1,6 +1,9 @@
 # http://travis-ci.org/#!/ipython/ipyparallel
 language: python
 python:
+  - "3.8.2"
+  - "3.8"
+  - "3.9-dev"
   - "nightly"
   - 3.6
   - 2.7
@@ -26,6 +29,7 @@ after_success:
   - codecov
 matrix:
   allow_failures:
+    - python: "3.9-dev"
     - python: "nightly"
   include:
     - python: 3.6
